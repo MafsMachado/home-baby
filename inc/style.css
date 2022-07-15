@@ -82,6 +82,10 @@ input {
     width: 100%;
 }
 
+#intro .container .left h1{
+    text-align: right;
+}
+
 #intro .hover{
     display: none;
     transition: all 0.5s ease-in-out;

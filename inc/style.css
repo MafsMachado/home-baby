@@ -1,0 +1,67 @@
+@font-face {
+    src: url('fonts/kawoszeh.otf');
+    font-family: 'kawoszeh';
+}
+
+/*  COLOURS
+    cream: #E8E3D8;
+    bronze: #CE976D;
+    palepink: #C5968A;
+    redpink: #DB7C7B;
+    purple: #DBBCD7;
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Krona One", sans-serif;
+}
+
+
+
+/* NAV */
+
+nav{
+    font-family: "Krona One", sans-serif;
+    background-color: #E8E3D8;
+    color: #CE976D;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 2px solid #CE976D;
+    font-size: small;
+}
+
+nav .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+nav .navbar ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+nav .navbar ul li{
+    margin-right: 1rem;
+}
+
+nav .navbar ul li a{
+    color: #CE976D;
+
+
+}
+
+input {
+    color: #CE976D;
+    background-color: #E8E3D8;
+    border: none;
+    border-bottom: 2px solid #CE976D;
+}

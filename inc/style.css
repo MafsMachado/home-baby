@@ -21,6 +21,10 @@ body{
     font-family: "Krona One", sans-serif;
 }
 
+h1 {
+    font-family: "kawoszeh", sans-serif;
+}
+
 
 
 /* NAV */
@@ -33,7 +37,7 @@ nav{
     justify-content: space-around;
     width: 100%;
     border-bottom: 2px solid #CE976D;
-    font-size: small;
+    font-size: x-small;
 }
 
 nav .navbar {
@@ -64,4 +68,47 @@ input {
     background-color: #E8E3D8;
     border: none;
     border-bottom: 2px solid #CE976D;
+}
+
+
+/* INDEX */
+
+#intro{
+    background-color: #E8E3D8;
+    color: #CE976D;
+}
+
+#intro .container{
+    width: 100%;
+}
+
+#intro .hover{
+    display: none;
+    transition: all 0.5s ease-in-out;
+    font-family: "krona one", sans-serif;
+}
+
+#intro .hover:hover{
+    display: auto;
+    transition: all 0.5s ease-in-out;
+}
+
+#intro .hover .shade {
+    background-color: #E8E3D8;
+    mix-blend-mode: lighten;
+}
+
+#home {
+    background-color: #C5968A;
+    color: #E8E3D8;
+}
+
+#brands {
+    background-color: #E8E3D8;
+    color: #CE976D;
+}
+
+#baby {
+    background-color: #DBBCD7;
+    color: #DB7C7B;
 }

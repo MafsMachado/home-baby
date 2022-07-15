@@ -14,9 +14,9 @@
 </head>
 <body>
 
-    <nav class="pt-2 pb-2">
+    <nav class="pt-1 pb-1">
         <section class="logo">
-            <img src="img/fulllogo.png" alt="Full Logo" width="160">
+            <a href="index.php"><img src="img/fulllogo.png" alt="Full Logo" width="160"></a>
         </section>
         <section class="navbar">
             <div class="navIcons">

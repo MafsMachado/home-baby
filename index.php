@@ -2,10 +2,12 @@
 include "header.php";
 ?>
 
+<!-- ** INTRO ** -->
 <section id="intro" class="pt-5 pb-5">
-    <div class="container mx-auto">
-        <div class="row">
-            <div class="col-6 left pr-1">
+    <div class="container ">
+        <div class="row mx-auto">
+            <!-- for your home -->
+            <div class="col-6 left">
                     <div class="imgIntro text-center">
                         <img src="img/general/forYourHome.jpeg" alt="Main Home" width="400">
                         <div class="hover">
@@ -13,12 +15,13 @@ include "header.php";
                             <p class="text-white">Home</p>
                         </div>
                     </div>
-                    <h1 class="pt-2">Everything for</h1>
+                    <h1 class="pt-3">Everything for</h1>
                     <h1 class="">your home.</h1>
             </div>
-            <div class="col-6 right pl-1">
+            <!-- for your baby -->
+            <div class="col-6 right">
                 <h1>Everything for</h1>
-                <h1 class="pb-2">your baby.</h1>
+                <h1 class="pb-3">your baby.</h1>
                 <div class="imgIntro text-center">
                     <img src="img/general/forYourBaby.jpg" alt="Main Baby" width="400">
                     <div class="hover">
@@ -31,16 +34,34 @@ include "header.php";
     </div>
 </section>
 
-<section id="home" class="">
-
+<section id="home" class="pl-4 pr-4 pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <h4>Cushions</h4>
+            
+        </div>
+        <div class="row pt-3">
+            <h4>Lamps</h4>
+            
+        </div>
+    </div>
 </section>
 
 <section id="brands" class="">
-
+    <h4>Brands</h4>
 </section>
 
-<section id="baby" class="">
-
+<section id="baby" class="pl-4 pr-4 pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <h4>Toys</h4>
+            
+        </div>
+        <div class="row pt-3">
+            <h4>Feeding</h4>
+            
+        </div>
+    </div>
 </section>
 
 <?php

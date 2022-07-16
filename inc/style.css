@@ -146,7 +146,51 @@ input {
 
 
 /* ********************************************************************************* */
+/* ABOUT US */
+#aboutUs {
+    background-color: #E8E3D8;
+    color: #CE976D;
+    width: 100%;
+}
+
+#aboutUs .row {
+    width: 100%;
+}
+
+#aboutUs p {
+    font-size: 12px;
+}
+
+
+
+/* ********************************************************************************* */
 /* FOOTER */
 footer {
     display: flex;
+    background-color: #E8E3D8;
+    color: #CE976D;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: small;
+    border-top: 2px solid #CE976D;
 }
+
+footer a{
+    color: #CE976D;
+    text-decoration: none;
+}
+
+footer .column {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .column .subpage {
+    font-size: x-small;
+    padding-top: 10px;
+}
+
+footer .facmargin {
+    margin-right: 10px;
+}
+

@@ -47,8 +47,8 @@ include "header.php";
     </div>
 </section>
 
-<section id="brands" class="">
-    <h4>Brands</h4>
+<section id="brands" class="pt-4 pb-4">
+    <h4 class="text-center">Brands</h4>
 </section>
 
 <section id="baby" class="pl-4 pr-4 pt-5 pb-5">

@@ -8,7 +8,7 @@ include 'header.php';
 <section id="login" class="container mx-auto">
     <div class="row d-flex justify-content-center">
         <!-- login -->
-        <form action="actions.php?act=login" method="POST" class="form col-md-5 d-flex flex-column align-content-start">
+        <form action="inc/actions.php?act=login" method="POST" class="form col-md-5 d-flex flex-column align-content-start">
                 <h4>Login</h4>
                 <div class="doLogin text-center mt-1 pt-5 pb-5">
                     <div>

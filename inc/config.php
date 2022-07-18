@@ -2,6 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+$debug = true;
+
 $server = '127.0.0.1';
 $username = 'admin';
 $password = 'root';

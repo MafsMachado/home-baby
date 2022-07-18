@@ -7,7 +7,7 @@ if($act == 'login'){
     $email = $_POST['email'];
     $password = hash('sha256', $_POST['password']);
 
-    $stmt = $conn->prepare ("SELECT COUNT(*) AS tot, ID, email, password FROM clientes WHERE email = ? AND password = ?");
+    $stmt = $conn->prepare ("SELECT COUNT(*) AS tot, ID, email, password FROM cliente WHERE email = ? AND password = ?");
     if($stmt == false and $debug)
         die('Error: '. $conn->error);
 
@@ -37,7 +37,7 @@ else if ($act == 'newAccount'){
     if($email == "" || $password == "" || $name == "")
         die('Required fields missing');
 
-    $stmt = $conn->prepare ("INSERT INTO clientes (email, password, name) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare ("INSERT INTO cliente (email, password, name) VALUES (?, ?, ?)");
     $stmt->bind_param('sss', $email, $password, $name);
     $stmt->execute();
 

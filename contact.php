@@ -1,4 +1,7 @@
 <?php
+include 'config.php';
+
+$pageTitle = "Contact";
 include "header.php";
 ?>
 

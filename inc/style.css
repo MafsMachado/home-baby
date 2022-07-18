@@ -27,6 +27,30 @@ h1, h4 {
     font-family: "kawoszeh", sans-serif;
 }
 
+input{
+    font-size: x-small;
+}
+
+::placeholder{
+    color: #ce976d88;
+    font-size: x-small;
+}
+
+input[type="submit"]{
+    font-size: small;
+    background-color: #CE976D;
+    color: #E8E3D8;
+    border: none;
+    margin: 0;
+    padding: 10px 60px;
+    margin-top: 10px;
+}
+
+form{
+    margin: 0;
+    padding: 0;
+}
+
 
 
 /* ********************************************************************************* */
@@ -50,7 +74,7 @@ nav{
 }
 
 nav .navIcons {
-    display:flex;
+    display: flex;
 }
 
 nav .navIcons div {
@@ -70,14 +94,12 @@ nav .navbar ul{
     
 }
 
-nav .navbar ul li{
-    margin-right: 1rem;
+nav .navbar a{
+    color: #CE976D;
 }
 
-nav .navbar ul li a{
-    color: #CE976D;
-
-
+nav .navbar .ml {
+    margin-left: 25px;
 }
 
 input {
@@ -146,7 +168,52 @@ input {
 
 
 /* ********************************************************************************* */
+/* LOGIN */
+
+#login{
+    background-color: #E8E3D8;
+    color: #CE976D;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+#login .row{
+    width: 100%;
+}
+
+.doLogin, .newAccount {
+    background-color: #E8E3D8;
+    color: #CE976D;
+    border: 1px solid #CE976D;
+    font-size: small;
+    padding: 10px;
+    width: 100%;
+}
+
+#login input {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#login input[type="submit"]{
+    font-size: small;
+    background-color: #CE976D;
+    color: #E8E3D8;
+    border: none;
+    margin: 0;
+    padding: 10px 60px;
+    margin-top: 30px;
+}
+
+
+
+
+
+/* ********************************************************************************* */
 /* ABOUT US */
+
 #aboutUs {
     background-color: #E8E3D8;
     color: #CE976D;
@@ -165,6 +232,7 @@ input {
 
 /* ********************************************************************************* */
 /* CONTACT */
+
 #contact {
     background-color: #E8E3D8;
     color: #CE976D;
@@ -183,6 +251,7 @@ input {
 
 /* ********************************************************************************* */
 /* FOOTER */
+
 footer {
     display: flex;
     background-color: #E8E3D8;

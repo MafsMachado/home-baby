@@ -1,4 +1,7 @@
 <?php
+include 'config.php';
+
+$pageTitle = "Home";
 include "header.php";
 ?>
 

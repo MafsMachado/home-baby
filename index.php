@@ -1,4 +1,7 @@
 <?php
+include 'config.php';
+
+$pageTitle = 'Home & Baby';
 include "header.php";
 ?>
 
@@ -8,15 +11,15 @@ include "header.php";
         <div class="row mx-auto">
             <!-- for your home -->
             <div class="col-6 left">
-                    <div class="imgIntro text-center">
-                        <img src="img/general/forYourHome.jpeg" alt="Main Home" width="400">
-                        <div class="hover">
-                            <div class="shade"></div>
-                            <p class="text-white">Home</p>
-                        </div>
+                <div class="imgIntro text-center">
+                    <img src="img/general/forYourHome.jpeg" alt="Main Home" width="400">
+                    <div class="hover">
+                        <div class="shade"></div>
+                        <p class="text-white">Home</p>
                     </div>
-                    <h1 class="pt-3">Everything for</h1>
-                    <h1 class="">your home.</h1>
+                </div>
+                <h1 class="pt-3">Everything for</h1>
+                <h1 class="">your home.</h1>
             </div>
             <!-- for your baby -->
             <div class="col-6 right">

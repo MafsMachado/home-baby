@@ -1,9 +1,10 @@
 <?php
 include 'config.php';
 
-$pageTitle = "Baby";
+$pageTitle = "Cart";
 include "header.php";
 ?>
+
 
 
 <?php

@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include 'inc/config.php';
 
 $pageTitle = "Contact";
 include "header.php";

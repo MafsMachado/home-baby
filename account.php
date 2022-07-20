@@ -1,8 +1,13 @@
 <?php
-include 'config.php';
+session_start();
+include 'inc/config.php';
 
 $pageTitle = "Account";
 include "header.php";
+
+if(isset($_SESSION['username'])){
+    echo "Welcome '{$_SESSION['nome']}'";
+}
 ?>
 
 <section class="container pt-5 pb-5">

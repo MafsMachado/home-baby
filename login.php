@@ -1,8 +1,17 @@
 <?php
-include 'config.php';
+include 'inc/config.php';
 
 $pageTitle = 'Login';
 include 'header.php';
+?>
+
+<?php
+    $msg = @$_GET['msg'];
+
+    switch($msg){
+        case 'loginErr': echo 'Erro a fazer login'; break;
+        case 'noPermission': echo 'Não tem acesso para aceder a este conteúdo, faça login abaixo'; break;
+    }
 ?>
 
 <section id="login" class="container mx-auto">
@@ -24,7 +33,7 @@ include 'header.php';
         </form>
         <div class="col-1"></div>
          <!-- nova conta -->
-         <form action="actions.php?act=newAccount" method="POST" class="form col-md-5 d-flex flex-column align-content-start">
+         <form action="inc/actions.php?act=newAccount" method="POST" class="form col-md-5 d-flex flex-column align-content-start">
             <h4>Register</h4>
             <div class="newAccount text-center mt-1 pt-5 pb-5">
                 <div>

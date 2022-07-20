@@ -1,20 +1,18 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
 $debug = true;
 
-$server = '127.0.0.1';
-$username = 'admin';
+$server = 'localhost';
+$username = 'root';
 $password = 'root';
 $db = 'home&baby';
-$port = 8889;
 
-$conn = new mysqli($server, $username, $password, $db, $port);
+$conn = mysqli_connect($server, $username, $password, $db);
 
 if ($conn->connect_error){
     echo "Can't connect to the database:".$conn->connect_error;
     exit;
 }
+    
 
 ?>

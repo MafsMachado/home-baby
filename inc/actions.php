@@ -1,15 +1,13 @@
 <?php
-session_start();
 include 'config.php';
 
 $act = $_GET['act'];
 
 if($act == 'login'){
     $email = $_POST['email'];
-    $password = hash('sha256', $_POST['password']);
+    $password = $_POST['password'];
 
-
-    $stmt = $conn->prepare("SELECT ID, email, password FROM cliente WHERE email=? AND password=?");
+    $stmt = $conn->prepare("SELECT COUNT(*) AS tot, ID FROM cliente WHERE email=? AND password=?");
     if($stmt === false and $debug)
         die('Erro: '.$conn->error);
 
@@ -19,15 +17,17 @@ if($act == 'login'){
     $results = $stmt->get_result();
     $row = $results->fetch_assoc();
 
-    
     if ($row['tot'] == 1){ //login válido
-        $_SESSION['name'] = $row['name'];
+        $_SESSION['login'] = true;
+        $_SESSION['ID'] = $row['ID'];
+        $_SESSION['nome'] = $row['nome'];
         header('Location: ../account.php');
     }
-    else //login inválido
+    else
         header('Location: ../login.php?msg=loginErr');
 
     $stmt->close();
+
 }
 else if ($act == 'newAccount'){
     $email = $_POST['email'];

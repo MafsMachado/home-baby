@@ -150,7 +150,7 @@ input {
     mix-blend-mode: lighten;
 }
 
-#home {
+#indexHome {
     background-color: #C5968A;
     color: #E8E3D8;
 }
@@ -160,7 +160,7 @@ input {
     color: #CE976D;
 }
 
-#baby {
+#indexBaby {
     background-color: #DBBCD7;
     color: #DB7C7B;
 }
@@ -226,6 +226,51 @@ input {
 
 #aboutUs p {
     font-size: 12px;
+}
+
+
+
+/* ********************************************************************************* */
+/* HOME */
+
+#home {
+    background-color: #C5968A;
+    color: #E8E3D8;
+    width: 100%;
+}
+
+#home .cat{
+    color: #E8E3D8;
+    text-decoration: none;
+    font-family: kawoszeh;
+    font-size: large;
+}
+
+#home .subCat{
+    color: #E8E3D8;
+    text-decoration: none;
+    font-family: krona one;
+    font-size: xx-small;
+}
+
+#home .main{
+    width: 80%;
+}
+
+#home .title{
+    text-align: right;
+    width: 100%;
+}
+
+#home .produto {
+    width: 300px;
+}
+
+#home .produtos a {
+    font-family: krona one;
+    font-size: xx-small;
+    color: #E8E3D8;
+    text-decoration: none;
 }
 
 

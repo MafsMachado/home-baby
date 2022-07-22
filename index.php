@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'inc/config.php';
 
 $pageTitle = 'Home & Baby';
@@ -37,7 +38,8 @@ include "header.php";
     </div>
 </section>
 
-<section id="home" class="pl-4 pr-4 pt-5 pb-5">
+<!-- ** HOME ** -->
+<section id="indexHome" class="pl-4 pr-4 pt-5 pb-5">
     <div class="container">
         <div class="row">
             <h4>Cushions</h4>
@@ -50,11 +52,13 @@ include "header.php";
     </div>
 </section>
 
+<!-- ** BRANDS ** -->
 <section id="brands" class="pt-4 pb-4">
     <h4 class="text-center">Brands</h4>
 </section>
 
-<section id="baby" class="pl-4 pr-4 pt-5 pb-5">
+<!-- ** BABY ** -->
+<section id="indexBaby" class="pl-4 pr-4 pt-5 pb-5">
     <div class="container">
         <div class="row">
             <h4>Toys</h4>

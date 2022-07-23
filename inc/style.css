@@ -36,7 +36,7 @@ input{
     font-size: x-small;
 }
 
-input[type="submit"]{
+input[type="submit"], button {
     font-size: small;
     background-color: #CE976D;
     color: #E8E3D8;
@@ -209,6 +209,22 @@ input {
 
 
 
+/* ********************************************************************************* */
+/* ACCOUNT */
+
+#account{
+    background-color: #E8E3D8;
+    color: #CE976D;
+}
+
+#account h1{
+    color: #CE976D;
+}
+
+#account a{
+    text-decoration: none;
+    color: #CE976D;
+}
 
 
 /* ********************************************************************************* */

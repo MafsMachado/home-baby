@@ -14,7 +14,7 @@ $name = $_SESSION['name'];
     <h1>Hi <?= $name ?>,</h1>
     <div class="row"> 
         <div class="col-md-4 d-flex flex-column">
-            <a href="profile.php" class="pt-3">Profile</a>
+            <a href="#" class="pt-3">Profile</a>
             <a href="#" class="pt-2">Purchases</a>
             <a href="#" class="pt-2">Settings</a>
         </div>

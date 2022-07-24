@@ -2,7 +2,7 @@
 session_start();
 include 'inc/config.php';
 
-$pageTitle = 'Login';
+$pageTitle = 'Admin';
 include 'header.php';
 ?>
 

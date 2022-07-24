@@ -57,8 +57,14 @@
                     <a href="<?php 
                     // se o login estiver verdadeiro, redireciona para a página account.php, se não, redireciona para a página login.php
                     if(isset($_SESSION['login'])){
+                        if($_SESSION['email'] == 'admin@home&baby.com'){
+                            echo 'admin.php';
+                        }
+                        else{
                         echo "account.php";
-                    }else{
+                        }
+                    }
+                    else{
                         echo "login.php";
                     }
                             

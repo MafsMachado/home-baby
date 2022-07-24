@@ -231,7 +231,7 @@ input {
 /* ********************************************************************************* */
 /* ADMIN */
 
-#admin{
+#admin, #adminProducts, #adminNewProducts{
     background-color: #E8E3D8;
     color: #CE976D;
 }
@@ -243,6 +243,49 @@ input {
 #admin a{
     text-decoration: none;
     color: #CE976D;
+}
+
+
+
+/* ********************************************************************************* */
+/* ADMIN PRODUCTS */
+
+#adminProducts table {
+    font-size: xx-small;
+    margin-left: 20px;
+    margin-right: 50px;
+    width: 100%;
+}
+
+#adminProducts table, tr, th, td{
+    border: 0.5px dotted grey;
+    border-radius: 50%;
+    padding: 5px 10px; 
+}
+#adminProducts table a {
+    text-decoration: none;
+    color: #CE976D;
+}
+
+
+
+/* ********************************************************************************* */
+/* ADMIN NEW PRODUCTS */
+
+#adminNewProducts div {
+    font-size: small;
+}
+
+#adminNewProducts input {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#adminNewProducts input[type="submit"]{
+    width: 200px;
+    margin-left: 0;
 }
 
 

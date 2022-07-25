@@ -23,13 +23,16 @@ $row = $result->fetch_assoc();
         <!-- titulo --> 
         <div class="mt-3">
             Title:
-            <input type="text" name="titulo" value="<?= $row['email'] ?>">
+            <input type="text" name="titulo" value="<?= $row['titulo'] ?>">
         </div>
         <!-- marca -->
         <div class="mt-3">
             Brand:
             <select name="ID_marca">
+            <!-- obter dados já existentes para as opções -->
             <?php
+
+                $stmt->close();
                 $sql = "SELECT * FROM marcas";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()) {
@@ -41,6 +44,17 @@ $row = $result->fetch_assoc();
             </select>
         </div>
         <!-- preço -->
+        <!-- voltar a abrir o stmt de forma a obter os dados anteriores -->
+        <?php
+            $ID = htmlentities($_GET['ID']);
+
+            $stmt = $conn->prepare("SELECT * FROM produtos WHERE ID = ?");
+            $stmt->bind_param("i", $ID);
+            $stmt->execute();
+
+            $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
+        ?>
         <div class="mt-3">
             Price:
             <input type="text" name="preco" value="<?= $row['preco'] ?>">
@@ -48,13 +62,15 @@ $row = $result->fetch_assoc();
         <!-- descrição-->
         <div class="mt-3">
             Description:
-            <input type="text" name="descricao" value="<?= $row['descricao'] ?>">
+            <textarea type="text" name="descricao" value=""><?= $row['descricao'] ?></textarea>
         </div>
         <!-- categoria -->
         <div class="mt-3">
             Category:
             <select name="ID_categoria">
+            <!-- obter dados já existentes para as opções -->
             <?php
+            $stmt->close();
                 $sql = "SELECT * FROM categorias";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()) {
@@ -69,7 +85,9 @@ $row = $result->fetch_assoc();
         <div class="mt-3">
             Sub-Category:
             <select name="ID_sub_categoria">
+            <!-- obter dados já existentes para as opções -->
             <?php
+            $stmt->close();
                 $sql = "SELECT * FROM sub_categorias";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()) {
@@ -84,7 +102,9 @@ $row = $result->fetch_assoc();
         <div class="mt-3">
             Product Type:
             <select name="ID_tipo_produto">
+            <!-- obter dados já existentes para as opções -->
             <?php
+            $stmt->close();
                 $sql = "SELECT * FROM tipo_produto";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()) {
@@ -108,7 +128,7 @@ $row = $result->fetch_assoc();
             /<?= $row['img1'] ?>
             " alt="" width="200">
             Image 1:
-            <input type="file" name="img1" value="<?= $row['email'] ?>">
+            <input type="file" name="img1">
         </div>
         <!-- imagem 2 -->
         <div class="mt-3">
@@ -153,7 +173,7 @@ $row = $result->fetch_assoc();
             /<?= $row['img4'] ?>
             " alt="" width="200">
             Image 4:
-            <input type="file" name="img4">
+            <input type="file" name="img4" value="<?= $row['img1'] ?>">
         </div>
         <input type="submit" value="Submit" class="mt-4">
     </form>

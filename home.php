@@ -35,7 +35,7 @@ include "header.php";
         <!-- produtos -->
         <div class="produtos d-flex flex-wrap justify-content-evenly">
         <?php
-        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+            mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
             $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_categoria=1 ORDER BY titulo";
             $result = $conn->query($sql);
             while($row = $result->fetch_assoc()){ ?>

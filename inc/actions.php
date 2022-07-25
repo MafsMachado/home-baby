@@ -9,7 +9,7 @@ if($act == 'login'){
     $email = $_POST['email'];
     $password = hash('sha256', $_POST['password']);
 
-    $stmt = $conn->prepare("SELECT COUNT(*) AS tot, ID FROM cliente WHERE email=? AND password=?");
+    $stmt = $conn->prepare("SELECT COUNT(*) AS tot, ID, name FROM cliente WHERE email=? AND password=?");
     if($stmt === false and $debug)
         die('Erro: '.$conn->error);
 
@@ -112,8 +112,10 @@ else if($act == 'newProduct'){
     
     if($stmt->affected_rows === 0)
         echo "Error, try again";
-    else
-        header('Location: admin/');
+    else{
+        header('Location: ../admin_products.php');
+        exit();
+    }
 
     $stmt->close();
 
@@ -192,6 +194,8 @@ else if($act == 'editProduct'){
 
     if($stmt->affected_rows === 0)
         echo "Error, try again";
+    else
+        echo 'admin_products.php';
     
     $stmt->close();
 

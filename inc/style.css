@@ -70,7 +70,7 @@ nav{
     top: 0;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 99;
 }
 
 nav .navIcons {
@@ -155,14 +155,50 @@ input {
     color: #E8E3D8;
 }
 
+#indexHome .carousel-control-next-icon, #indexHome .carousel-control-prev-icon {
+    background-color: #C5968A;
+    background-size: 55px;
+    border-radius: 15%;
+}
+
+#indexHome .produto {
+    width: 300px;
+}
+
+#indexHome .produtos a {
+    font-family: krona one;
+    font-size: xx-small;
+    color: #E8E3D8;
+    text-decoration: none;
+}
+
 #brands {
     background-color: #E8E3D8;
     color: #CE976D;
 }
 
+
+
 #indexBaby {
     background-color: #DBBCD7;
     color: #DB7C7B;
+}
+
+#indexBaby .carousel-control-next-icon, #indexBaby .carousel-control-prev-icon {
+    background-color: #DBBCD7;
+    background-size: 55px;
+    border-radius: 15%;
+}
+
+#indexBaby .produto {
+    width: 300px;
+}
+
+#indexBaby .produtos a {
+    font-family: krona one;
+    font-size: xx-small;
+    color: #E8E3D8;
+    text-decoration: none;
 }
 
 
@@ -259,8 +295,10 @@ input {
 
 #adminProducts table, tr, th, td{
     border: 0.5px dotted grey;
-    border-radius: 50%;
     padding: 5px 10px; 
+    width: auto;
+
+
 }
 #adminProducts table a {
     text-decoration: none;
@@ -276,7 +314,7 @@ input {
     font-size: small;
 }
 
-#adminNewProducts input {
+#adminNewProducts input, textarea {
     margin-left: 10px;
     border: 0.5px solid #CE976D;
     width: 70%;

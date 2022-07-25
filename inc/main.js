@@ -1,6 +1,7 @@
 window.onscroll = setLogoSize;
 window.onload = setLogoSize;
 
+
 function setLogoSize () {
     logo = document.getElementById("logo");
     //abaixo do topo

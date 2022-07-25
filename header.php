@@ -7,10 +7,13 @@
     <title><?= $pageTitle ?></title>
 
     <link rel="icon" href="img/logoicon.png" type="image/iconpng">
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+    <!-- style -->
     <link rel="stylesheet" href="inc/style.css">
 
 </head>
@@ -57,10 +60,9 @@
                 <div class="icon">
                     <a href="
                     <?php
-                        if(isset($_SESSION['login'])){
-                            if($_SESSION['name'] == 'Admin'){
+                        if($_SESSION['login'] == true){
+                            if($_SESSION['name'] == "Admin"){
                                 echo 'admin.php';
-                                echo 'admin';
                             }
                             else{
                                 echo 'account.php';

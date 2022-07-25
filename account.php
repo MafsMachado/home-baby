@@ -5,11 +5,10 @@ include 'inc/config.php';
 $pageTitle = "Account";
 include "header.php";
 
-$name = $_SESSION['name'];
 ?>
 
 <section id="account" class="container pt-5 pb-5">
-    <h1>Hi <?= $name ?>,</h1>
+    <h1>Hi <?= $_SESSION['name'] ?>,</h1>
     <div class="row"> 
         <div class="col-md-4 d-flex flex-column">
             <a href="#" class="pt-3">Profile</a>

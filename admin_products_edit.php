@@ -4,17 +4,26 @@ include 'inc/config.php';
 
 $pageTitle = 'Admin - Edit Product';
 include 'header.php';
+
+$ID = htmlentities($_GET['ID']);
+
+$stmt = $conn->prepare("SELECT * FROM produtos WHERE ID = ?");
+$stmt->bind_param("i", $ID);
+$stmt->execute();
+
+$result = $stmt->get_result();
+$row = $result->fetch_assoc();
 ?>
 
 <section id="adminEditProducts" class="pt-5 pb-5 container">
-    <h1>Create new product</h1>
+    <h1>Edit product</h1>
     <form action="inc/actions.php?act=editProduct" method="POST" autocomplete="off" enctype="multipart/form-data" class="mt-4">
         <!-- id -->
-        <input type="hidden" name="ID" value="<?= $ID ?>">   
+        <div><?= $ID ?></div>
         <!-- titulo --> 
         <div class="mt-3">
             Title:
-            <input type="text" name="titulo" required>
+            <input type="text" name="titulo" value="<?= $row['email'] ?>">
         </div>
         <!-- marca -->
         <div class="mt-3">
@@ -34,12 +43,12 @@ include 'header.php';
         <!-- preço -->
         <div class="mt-3">
             Price:
-            <input type="text" name="preco" required>
+            <input type="text" name="preco" value="<?= $row['preco'] ?>">
         </div>
         <!-- descrição-->
         <div class="mt-3">
             Description:
-            <input type="text" name="descricao" required>
+            <input type="text" name="descricao" value="<?= $row['descricao'] ?>">
         </div>
         <!-- categoria -->
         <div class="mt-3">
@@ -99,7 +108,7 @@ include 'header.php';
             /<?= $row['img1'] ?>
             " alt="" width="200">
             Image 1:
-            <input type="file" name="img1" required>
+            <input type="file" name="img1" value="<?= $row['email'] ?>">
         </div>
         <!-- imagem 2 -->
         <div class="mt-3">

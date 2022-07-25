@@ -6,8 +6,6 @@ $pageTitle = "Account";
 include "header.php";
 
 $name = $_SESSION['name'];
-
-
 ?>
 
 <section id="account" class="container pt-5 pb-5">

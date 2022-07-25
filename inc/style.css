@@ -231,7 +231,7 @@ input {
 /* ********************************************************************************* */
 /* ADMIN */
 
-#admin, #adminProducts, #adminNewProducts{
+#admin, #adminProducts, #adminNewProducts, #adminEditProducts{
     background-color: #E8E3D8;
     color: #CE976D;
 }
@@ -284,6 +284,26 @@ input {
 }
 
 #adminNewProducts input[type="submit"]{
+    width: 200px;
+    margin-left: 0;
+}
+
+
+/* ********************************************************************************* */
+/* ADMIN EDIT PRODUCTS */
+
+#adminEditProducts div {
+    font-size: small;
+}
+
+#adminEditProducts input {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#adminEditProducts input[type="submit"]{
     width: 200px;
     margin-left: 0;
 }

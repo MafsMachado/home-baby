@@ -4,6 +4,8 @@ include 'inc/config.php';
 
 $pageTitle = 'Admin';
 include 'header.php';
+
+$_SESSION['login'] = true;
 ?>
 
 <section id="admin" class="container pt-5 pb-5">

@@ -123,33 +123,62 @@ input {
     width: 100%;
 }
 
-#intro .container .left h1{
-    text-align: right;
-}
-
-#intro .imgIntro {
+#intro .imgIntroHome{
+    background-image: url('../img/general/forYourHome.jpeg');
+    background-size: cover;
+    width: 400px;
+    height: 500px;
     position: relative;
 }
 
-#intro .imgIntro .hover{
+#intro .imgIntroHome .hover{
+    background-color: #e8e3d8d0;
+    width: 100%;
+    height: 100%;
     display: none;
     position: absolute;
     top: 0;
-    left: 0;
-    transition: all 0.5s ease-in-out;
-    font-family: "krona one", sans-serif;
 }
 
-#intro .imgIntro .hover:hover{
+#intro .imgIntroHome:hover .hover{
     display: block;
-    transition: all 0.5s ease-in-out;
 }
 
-#intro .hover .shade {
-    background-color: #e8e3d8;
-    mix-blend-mode: lighten;
+#intro .imgIntroHome .hover a{
+    position: absolute;
+    color: white;
+    bottom: 5%;
+    left: 40%;
 }
 
+#intro .imgIntroBaby{
+    background-image: url('../img/general/forYourBaby.jpg');
+    background-size: cover;
+    width: 400px;
+    height: 500px;
+    position: relative;
+}
+
+#intro .imgIntroBaby .hover{
+    background-color: #e8e3d8d0;
+    
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+#intro .imgIntroBaby:hover .hover{
+    display: block;
+}
+
+#intro .imgIntroBaby .hover a{
+    position: absolute;
+    color: white;
+    bottom: 5%;
+    left: 40%;
+}
 #indexHome {
     background-color: #C5968A;
     color: #E8E3D8;
@@ -170,6 +199,45 @@ input {
     font-size: xx-small;
     color: #E8E3D8;
     text-decoration: none;
+}
+
+#indexHome .pdtImg{
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+#indexHome .pdtImg .hover{
+    background-color: #e8e3d864;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+#indexHome .pdtImg:hover .hover{
+    display: block;
+}
+
+#indexHome .heart {
+    color: #CE976D;
+    position: absolute;
+    right: 6%;
+    top: 6%;
+}
+
+#indexHome .heart:hover .heartOutline{
+    display:none;
+}
+
+#indexHome .heart .heartFull{
+    display:none;
+}
+
+#indexHome .heart:hover .heartFull{
+    display:block;
 }
 
 #brands {
@@ -199,6 +267,45 @@ input {
     font-size: xx-small;
     color: #E8E3D8;
     text-decoration: none;
+}
+
+#indexBaby .pdtImg{
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+#indexBaby .pdtImg .hover{
+    background-color: #e8e3d864;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+#indexBaby .pdtImg:hover .hover{
+    display: block;
+}
+
+#indexBaby .heart {
+    color: #CE976D;
+    position: absolute;
+    right: 6%;
+    top: 6%;
+}
+
+#indexBaby .heart:hover .heartOutline{
+    display:none;
+}
+
+#indexBaby .heart .heartFull{
+    display:none;
+}
+
+#indexBaby .heart:hover .heartFull{
+    display:block;
 }
 
 
@@ -267,7 +374,7 @@ input {
 /* ********************************************************************************* */
 /* ADMIN */
 
-#admin, #adminProducts, #adminNewProducts, #adminEditProducts{
+#admin, #adminProduct, #adminNewProduct, #adminEditProduct, #adminBrand, #adminNewBrand, #adminEditBrand, #adminCategory, #adminNewCategory, #adminEditCategory, #adminSubCategory, #adminNewSubCategory, #adminEditSubCategory, #adminProductType, #adminNewProductType, #adminEditProductType{
     background-color: #E8E3D8;
     color: #CE976D;
 }
@@ -286,62 +393,277 @@ input {
 /* ********************************************************************************* */
 /* ADMIN PRODUCTS */
 
-#adminProducts table {
+#adminProduct table {
     font-size: xx-small;
     margin-left: 20px;
     margin-right: 50px;
     width: 100%;
 }
 
-#adminProducts table, tr, th, td{
+#adminProduct table, tr, th, td{
     border: 0.5px dotted grey;
     padding: 5px 10px; 
     width: auto;
 
 
 }
-#adminProducts table a {
+#adminProduct table a {
     text-decoration: none;
     color: #CE976D;
 }
 
-
-
-/* ********************************************************************************* */
-/* ADMIN NEW PRODUCTS */
-
-#adminNewProducts div {
+#adminNewProduct div {
     font-size: small;
 }
 
-#adminNewProducts input, textarea {
+#adminNewProduct input, textarea {
     margin-left: 10px;
     border: 0.5px solid #CE976D;
     width: 70%;
     padding: 5px;
 }
 
-#adminNewProducts input[type="submit"]{
+#adminNewProduct input[type="submit"]{
+    width: 200px;
+    margin-left: 0;
+}
+
+#adminEditProduct div {
+    font-size: small;
+}
+
+#adminEditProduct input {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#adminEditProduct input[type="submit"]{
     width: 200px;
     margin-left: 0;
 }
 
 
-/* ********************************************************************************* */
-/* ADMIN EDIT PRODUCTS */
 
-#adminEditProducts div {
+/* ********************************************************************************* */
+/* ADMIN BRANDS */
+
+#adminBrand table {
+    font-size: xx-small;
+    margin-left: 20px;
+    margin-right: 50px;
+    width: 100%;
+}
+
+#adminBrand table, tr, th, td{
+    border: 0.5px dotted grey;
+    padding: 5px 10px; 
+    width: auto;
+
+
+}
+#adminBrand table a {
+    text-decoration: none;
+    color: #CE976D;
+}
+
+#adminNewBrand div {
     font-size: small;
 }
 
-#adminEditProducts input {
+#adminNewBrand input, textarea {
     margin-left: 10px;
     border: 0.5px solid #CE976D;
     width: 70%;
     padding: 5px;
 }
 
-#adminEditProducts input[type="submit"]{
+#adminNewBrand input[type="submit"]{
+    width: 200px;
+    margin-left: 0;
+}
+
+#adminEditBrand div {
+    font-size: small;
+}
+
+#adminEditBrand input {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#adminEditBrand input[type="submit"]{
+    width: 200px;
+    margin-left: 0;
+}
+
+
+
+/* ********************************************************************************* */
+/* ADMIN CATEGORY */
+
+#adminCategory table {
+    font-size: xx-small;
+    margin-left: 20px;
+    margin-right: 50px;
+    width: 100%;
+}
+
+#adminCategory table, tr, th, td{
+    border: 0.5px dotted grey;
+    padding: 5px 10px; 
+    width: auto;
+
+
+}
+#adminCategory table a {
+    text-decoration: none;
+    color: #CE976D;
+}
+
+#adminNewCategory div {
+    font-size: small;
+}
+
+#adminNewCategory input, textarea {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#adminNewCategory input[type="submit"]{
+    width: 200px;
+    margin-left: 0;
+}
+
+#adminEditCategory div {
+    font-size: small;
+}
+
+#adminEditCategory input {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#adminEditCategory input[type="submit"]{
+    width: 200px;
+    margin-left: 0;
+}
+
+
+
+/* ********************************************************************************* */
+/* ADMIN SUB CATEGORY */
+
+#adminSubCategory table {
+    font-size: xx-small;
+    margin-left: 20px;
+    margin-right: 50px;
+    width: 100%;
+}
+
+#adminSubCategory table, tr, th, td{
+    border: 0.5px dotted grey;
+    padding: 5px 10px; 
+    width: auto;
+
+
+}
+#adminSubCategory table a {
+    text-decoration: none;
+    color: #CE976D;
+}
+
+#adminNewSubCategory div {
+    font-size: small;
+}
+
+#adminNewSubCategory input, textarea {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#adminNewSubCategory input[type="submit"]{
+    width: 200px;
+    margin-left: 0;
+}
+
+#adminEditSubCategory div {
+    font-size: small;
+}
+
+#adminEditSubCategory input {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#adminEditSubCategory input[type="submit"]{
+    width: 200px;
+    margin-left: 0;
+}
+
+
+
+/* ********************************************************************************* */
+/* ADMIN PRODUCT TYPE */
+
+#adminProductType table {
+    font-size: xx-small;
+    margin-left: 20px;
+    margin-right: 50px;
+    width: 100%;
+}
+
+#adminProductType table, tr, th, td{
+    border: 0.5px dotted grey;
+    padding: 5px 10px; 
+    width: auto;
+
+
+}
+#adminProductType table a {
+    text-decoration: none;
+    color: #CE976D;
+}
+
+#adminNewProductType div {
+    font-size: small;
+}
+
+#adminNewProductType input, textarea {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#adminNewProductType input[type="submit"]{
+    width: 200px;
+    margin-left: 0;
+}
+
+#adminEditProductType div {
+    font-size: small;
+}
+
+#adminEditProductType input {
+    margin-left: 10px;
+    border: 0.5px solid #CE976D;
+    width: 70%;
+    padding: 5px;
+}
+
+#adminEditProductType input[type="submit"]{
     width: 200px;
     margin-left: 0;
 }
@@ -410,6 +732,48 @@ input {
     text-decoration: none;
 }
 
+#home .pdtImg{
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+#home .pdtImg .hover{
+    background-color: #e8e3d864;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+#home .pdtImg:hover .hover{
+    display: block;
+}
+
+#home .heart {
+    color: #CE976D;
+    position: absolute;
+    right: 6%;
+    top: 6%;
+}
+
+#home .heart:hover .heartOutline{
+    display:none;
+}
+
+#home .heart .heartFull{
+    display:none;
+}
+
+#home .heart:hover .heartFull{
+    display:block;
+}
+
+
+
+
 
 
 /* ********************************************************************************* */
@@ -419,15 +783,13 @@ input {
     background-color: #E8E3D8;
     color: #CE976D;
     width: 100%;
+    font-size: x-small;
 }
 
 #contact .row {
     width: 100%;
 }
 
-#contact p {
-    font-size: 12px;
-}
 
 
 

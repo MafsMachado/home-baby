@@ -173,7 +173,7 @@ $row = $result->fetch_assoc();
             /<?= $row['img4'] ?>
             " alt="" width="200">
             Image 4:
-            <input type="file" name="img4" value="<?= $row['img1'] ?>">
+            <input type="file" name="img4">
         </div>
         <input type="submit" value="Submit" class="mt-4">
     </form>

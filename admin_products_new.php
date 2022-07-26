@@ -6,7 +6,7 @@ $pageTitle = 'Admin - New Product';
 include 'header.php';
 ?>
 
-<section id="adminNewProducts" class="pt-5 pb-5 container">
+<section id="adminNewProduct" class="pt-5 pb-5 container">
     <h1>Create new product</h1>
     <form action="inc/actions.php?act=newProduct" method="POST" autocomplete="off" enctype="multipart/form-data" class="mt-4">
         <div class="mt-3">

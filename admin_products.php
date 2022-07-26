@@ -6,7 +6,7 @@ $pageTitle = 'Admin - Products';
 include 'header.php';
 ?>
 
-<section id="adminProducts" class="pt-5 pb-5">
+<section id="adminProduct" class="pt-5 pb-5">
 
     <div class="container">
         <div class="row">

@@ -29,8 +29,8 @@ include "header.php";
     <div class="main pt-3 d-flex flex-column">
         <!-- frase da categoria -->
         <div class="title mb-4">
-            <div>Everything for</div>
-            <div>your home.</div>
+            <div class="title1">Everything for</div>
+            <div class="title2">your home.</div>
         </div>
         <!-- produtos -->
         <div class="mt-2 produtos d-flex flex-wrap justify-content-evenly">
@@ -70,6 +70,8 @@ include "header.php";
         </div>
     </div>
 </section>
+
+
 
 
 <?php

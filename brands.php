@@ -7,7 +7,7 @@ include "header.php";
 ?>
 
 <section id="brands" class="container pt-5 pb-5 text-center">
-    <h1>Brands</h1>
+    <h1 class="mb-5">Brands</h1>
     <div class="row">
         <?php
         // mostrar imagem na base de dados
@@ -17,7 +17,7 @@ include "header.php";
         $stmt->execute();
         $result = $stmt->get_result();
         while($row = $result->fetch_assoc()){
-            echo '<div class="col-md-4 p-4">
+            echo '<div class="col-md-4 col-sm-12 p-4">
                     <img src="'.$row['img'].'" alt="'.$row['marca'].'" height="50">
                     <div class="card-body pt-3">'.$row['marca'].'</div>
                   </div>';

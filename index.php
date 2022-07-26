@@ -11,7 +11,7 @@ include "header.php";
     <div class="container">
         <div class="row mx-auto">
             <!-- for your home -->
-            <div class="col-6 d-flex flex-column align-items-center">
+            <div class="col-md-6 col-sm-12 d-flex flex-column align-items-center">
                 <div class="imgIntroHome">
                     <div class="hover">
                         <a href="home.php">Home</a>
@@ -23,7 +23,7 @@ include "header.php";
                 </div>
             </div>
             <!-- for your baby -->
-            <div class="col-6 d-flex flex-column align-items-center">
+            <div class="col-md-6 col-sm-12 d-flex flex-column align-items-center">
                 <div class="d-flex flex-column align-items-start align-self-start">    
                     <h1>Everything for</h1>
                     <h1 class="pb-3">your baby.</h1>
@@ -313,9 +313,9 @@ include "header.php";
     <div class="container mt-4">
         <div class="row">
                 <div class="col-md-3 col-sm-12 text-center"><img src="img/brands/h&m.png" alt="" width="75"></div>
-                <div class="col-md-3 col-sm-12 text-center pt-sm-2"><img src="img/brands/mushie.png" alt="" height="25"></div>
-                <div class="col-md-3 col-sm-12 text-center pt-sm-2"><img src="img/brands/laredoute.png" alt="" height="25"></div>
-                <div class="col-md-3 col-sm-12 text-center pt-sm-2"><img src="img/brands/liewood.png" alt="" height="25"></div>
+                <div class="col-md-3 col-sm-12 text-center pt-sm-4"><img src="img/brands/mushie.png" alt="" height="25"></div>
+                <div class="col-md-3 col-sm-12 text-center pt-sm-4"><img src="img/brands/laredoute.png" alt="" height="25"></div>
+                <div class="col-md-3 col-sm-12 text-center pt-sm-4"><img src="img/brands/liewood.png" alt="" height="25"></div>
         </div>
     </div>
 </section>
@@ -465,7 +465,7 @@ include "header.php";
                         <div class="produtos d-flex flex-wrap justify-content-evenly">
                             <?php
                                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-                                $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_tipo_produto=10 ORDER BY produtos.ID LIMIT 4";
+                                $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_sub_categoria=6 ORDER BY produtos.ID LIMIT 4";
                                 $result = $conn->query($sql);
                                 while($row = $result->fetch_assoc()){ ?>
                                     <div class="produto d-flex flex-column mt-4">
@@ -503,7 +503,7 @@ include "header.php";
                         <div class="produtos d-flex flex-wrap justify-content-evenly">
                             <?php
                                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-                                $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_tipo_produto=10 ORDER BY titulo LIMIT 4";
+                                $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_sub_categoria=6 ORDER BY titulo LIMIT 4";
                                 $result = $conn->query($sql);
                                 while($row = $result->fetch_assoc()){ ?>
                                     <div class="produto d-flex flex-column mt-4">
@@ -541,7 +541,7 @@ include "header.php";
                         <div class="produtos d-flex flex-wrap justify-content-evenly">
                             <?php
                                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-                                $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_tipo_produto=10 ORDER BY titulo DESC LIMIT 4";
+                                $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_sub_categoria=6 ORDER BY titulo DESC LIMIT 4";
                                 $result = $conn->query($sql);
                                 while($row = $result->fetch_assoc()){ ?>
                                     <div class="produto d-flex flex-column mt-4">
@@ -570,7 +570,6 @@ include "header.php";
                                                 <div class="m-0 pt-1"><?= $row['preco'] ?>€</div>
                                             </div>
                                         </a>
-                                    </div>
                                     </div>
                             <?php } ?>
                         </div>

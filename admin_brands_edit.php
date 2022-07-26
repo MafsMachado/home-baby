@@ -7,7 +7,7 @@ include 'header.php';
 
 $ID = htmlentities($_GET['ID']);
 
-$stmt = $conn->prepare("SELECT * FROM marcas WHERE ID = ?");
+$stmt = $conn->prepare("SELECT ID, marca, img FROM marcas WHERE ID = ?");
 $stmt->bind_param("i", $ID);
 $stmt->execute();
 
@@ -19,7 +19,7 @@ $row = $result->fetch_assoc();
     <h1>Edit brand</h1>
     <form action="inc/actions.php?act=editBrand" method="POST" autocomplete="off" enctype="multipart/form-data" class="mt-4">
         <!-- id -->
-        <div><?= $ID ?></div>
+        <input type="text" name="ID" value="<?= $ID ?>">
         <!-- marca -->
         <div class="mt-3">
             Brand:
@@ -27,7 +27,7 @@ $row = $result->fetch_assoc();
         </div>
         <!-- imagem -->
         <div class="mt-3">
-            <img src="img/brands" alt="" width="200">
+            <img src="img/brands/<?= $row['marca'] ?>" alt="" width="200">
             Image:
             <input type="file" name="img">
         </div>

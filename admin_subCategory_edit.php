@@ -7,7 +7,7 @@ include 'header.php';
 
 $ID = htmlentities($_GET['ID']);
 
-$stmt = $conn->prepare("SELECT * FROM marcas WHERE ID = ?");
+$stmt = $conn->prepare("SELECT * FROM sub_categorias WHERE ID = ?");
 $stmt->bind_param("i", $ID);
 $stmt->execute();
 
@@ -19,7 +19,7 @@ $row = $result->fetch_assoc();
     <h1>Edit sub category</h1>
     <form action="inc/actions.php?act=editSubCategory" method="POST" autocomplete="off" enctype="multipart/form-data" class="mt-4">
         <!-- id -->
-        <div><?= $ID ?></div>
+        <input type="text" name="ID" value="<?= $ID ?>">
         <!-- marca -->
         <div class="mt-3">
             Sub Category:

@@ -2,11 +2,11 @@
 session_start();
 include 'inc/config.php';
 
-$pageTitle = "Home";
+$pageTitle = "Baby - Fun";
 include "header.php";
 ?>
 
-<section id="home" class="p-5 d-flex justify-content-around">
+<section id="baby" class="p-5 d-flex justify-content-around">
     <!-- coluna dos links -->
     <div class="links pt-3 d-flex flex-column">
         <div class="home d-flex flex-column active">
@@ -27,16 +27,11 @@ include "header.php";
     
     <!-- coluna dos produtos -->
     <div class="main pt-3 d-flex flex-column">
-        <!-- frase da categoria -->
-        <div class="title mb-4">
-            <div>Everything for</div>
-            <div>your home.</div>
-        </div>
         <!-- produtos -->
         <div class="mt-2 produtos d-flex flex-wrap justify-content-evenly">
         <?php
             mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-            $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_categoria=1 ORDER BY titulo";
+            $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_categoria=2 AND ID_sub_categoria=8 ORDER BY titulo";
             $result = $conn->query($sql);
             while($row = $result->fetch_assoc()){ ?>
                 <div class="produto d-flex flex-column mt-4">

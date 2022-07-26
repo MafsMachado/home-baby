@@ -2,7 +2,7 @@
 session_start();
 include 'inc/config.php';
 
-$pageTitle = "Home";
+$pageTitle = "Home - Textiles";
 include "header.php";
 ?>
 
@@ -27,20 +27,15 @@ include "header.php";
     
     <!-- coluna dos produtos -->
     <div class="main pt-3 d-flex flex-column">
-        <!-- frase da categoria -->
-        <div class="title mb-4">
-            <div>Everything for</div>
-            <div>your home.</div>
-        </div>
         <!-- produtos -->
-        <div class="mt-2 produtos d-flex flex-wrap justify-content-evenly">
+        <div class="produtos d-flex flex-wrap justify-content-evenly">
         <?php
             mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-            $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_categoria=1 ORDER BY titulo";
+            $sql = "SELECT produtos.ID, titulo, preco, marca, img1 FROM produtos LEFT JOIN marcas ON produtos.ID_marca=marcas.marca WHERE ID_categoria=1 AND ID_sub_categoria=4 ORDER BY titulo";
             $result = $conn->query($sql);
             while($row = $result->fetch_assoc()){ ?>
                 <div class="produto d-flex flex-column mt-4">
-                    <a>
+                    <a href="product.php&ID=<?php echo $row['ID']; ?>">
                         <!-- imagem -->
                         <div class="pdtImg" style="background-image: url('<?= $row['img1'] ?>');">
                             <div class="hover">
@@ -53,19 +48,20 @@ include "header.php";
                                     </svg>
                                 </div>
                                 <div class="btnProductDetail">
-                                    <a href="<?php echo "product.php?ID=".$row['ID']; ?>">Product details</a>
+                                    <a href="#">Product details</a>
                                 </div>
                                 <div class="btnAddCart">
                                     <a href="#">Add to cart</a>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="details">
                             <div class="m-0 pt-2 tex-wrap"><?= $row['titulo'] ?></div>
                             <div class="m-0 pt-1"><?= $row['preco'] ?>€</div>
                         </div>
                     </a>
-                </div>
+                </div> 
         <?php } ?>
         </div>
     </div>

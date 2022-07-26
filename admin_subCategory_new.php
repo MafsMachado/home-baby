@@ -17,8 +17,7 @@ include 'header.php';
             Category:
             <select name="ID_categoria">
             <?php
-                $sql = "SELECT * FROM categorias";
-                $result = $conn->query($sql);
+                $result = $conn->query("SELECT ID, categoria FROM categorias ORDER BY ID");
                 while($row = $result->fetch_assoc()) {
             ?>
                     <option value="<?= $row['ID'] ?>"><?= $row['categoria'] ?></option>

@@ -126,8 +126,8 @@ input {
 #intro .imgIntroHome{
     background-image: url('../img/general/forYourHome.jpeg');
     background-size: cover;
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 600px;
     position: relative;
 }
 
@@ -154,14 +154,13 @@ input {
 #intro .imgIntroBaby{
     background-image: url('../img/general/forYourBaby.jpg');
     background-size: cover;
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 600px;
     position: relative;
 }
 
 #intro .imgIntroBaby .hover{
     background-color: #e8e3d8d0;
-    
     width: 100%;
     height: 100%;
     display: none;
@@ -194,7 +193,7 @@ input {
     width: 300px;
 }
 
-#indexHome .produtos a {
+#indexHome .produtos a, #indexHome .details {
     font-family: krona one;
     font-size: xx-small;
     color: #E8E3D8;
@@ -222,7 +221,7 @@ input {
 }
 
 #indexHome .heart {
-    color: #CE976D;
+    color: #C5968A;
     position: absolute;
     right: 6%;
     top: 6%;
@@ -238,6 +237,38 @@ input {
 
 #indexHome .heart:hover .heartFull{
     display:block;
+}
+
+#indexHome .btnProductDetail a{
+    font-size: x-small;
+    background-color: #C5968A;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    margin: 0;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#indexHome .btnProductDetail:hover a{
+    background-color: #DB7C7B;
+}
+
+#indexHome .btnAddCart a{
+    font-size: x-small;
+    background-color: #C5968A;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    margin: 0;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#indexHome .btnAddCart:hover a{
+    background-color: #DB7C7B;
 }
 
 #brands {
@@ -262,7 +293,7 @@ input {
     width: 300px;
 }
 
-#indexBaby .produtos a {
+#indexBaby .produtos a, #indexBaby .details {
     font-family: krona one;
     font-size: xx-small;
     color: #E8E3D8;
@@ -290,7 +321,7 @@ input {
 }
 
 #indexBaby .heart {
-    color: #CE976D;
+    color: #DBBCD7;
     position: absolute;
     right: 6%;
     top: 6%;
@@ -308,6 +339,37 @@ input {
     display:block;
 }
 
+#indexBaby .btnProductDetail a{
+    font-size: x-small;
+    background-color: #DBBCD7;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    margin: 0;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#indexBaby .btnProductDetail:hover a{
+    background-color: #CE976D;
+}
+
+#indexBaby .btnAddCart a{
+    font-size: x-small;
+    background-color: #DBBCD7;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    margin: 0;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#indexBaby .btnAddCart:hover a{
+    background-color: #CE976D;
+}
 
 
 /* ********************************************************************************* */
@@ -690,6 +752,25 @@ input {
 
 
 /* ********************************************************************************* */
+/* PRODUCT PAGE */
+
+#productPage{
+    background-color: #E8E3D8;
+    color: #CE976D;
+    width: 100%;
+}
+
+#productPage h1 {
+    font-family: krona one;
+}
+
+#productPage .ref {
+    font-size: xxx-small;
+}
+
+
+
+/* ********************************************************************************* */
 /* HOME */
 
 #home {
@@ -702,14 +783,14 @@ input {
     color: #E8E3D8;
     text-decoration: none;
     font-family: kawoszeh;
-    font-size: large;
+    font-size: xx-large;
 }
 
 #home .subCat{
     color: #E8E3D8;
     text-decoration: none;
     font-family: krona one;
-    font-size: xx-small;
+    font-size: x-small;
 }
 
 #home .main{
@@ -721,11 +802,16 @@ input {
     width: 100%;
 }
 
+#home .title div{
+    font-family: kawoszeh;
+    font-size: 60px;
+}
+
 #home .produto {
     width: 300px;
 }
 
-#home .produtos a {
+#home .produtos a, #home .details {
     font-family: krona one;
     font-size: xx-small;
     color: #E8E3D8;
@@ -753,7 +839,7 @@ input {
 }
 
 #home .heart {
-    color: #CE976D;
+    color: #C5968A;
     position: absolute;
     right: 6%;
     top: 6%;
@@ -771,8 +857,157 @@ input {
     display:block;
 }
 
+#home .btnProductDetail a{
+    font-size: x-small;
+    background-color: #C5968A;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    margin: 0;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#home .btnProductDetail:hover a{
+    background-color: #DB7C7B;
+}
+
+#home .btnAddCart a{
+    font-size: x-small;
+    background-color: #C5968A;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    margin: 0;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#home .btnAddCart:hover a{
+    background-color: #DB7C7B;
+}
 
 
+/* ********************************************************************************* */
+/* BABY */
+
+#baby {
+    background-color: #DBBCD7;
+    color: #DB7C7B;
+    width: 100%;
+}
+
+#baby .cat{
+    color: #DB7C7B;
+    text-decoration: none;
+    font-family: kawoszeh;
+    font-size: xx-large;
+}
+
+#baby .subCat{
+    color: #DB7C7B;
+    text-decoration: none;
+    font-family: krona one;
+    font-size: x-small;
+}
+
+#baby .main{
+    width: 80%;
+}
+
+#baby .title{
+    text-align: right;
+    width: 100%;
+}
+
+#baby .title div{
+    font-family: kawoszeh;
+    font-size: 60px;
+}
+
+#baby .produto {
+    width: 300px;
+}
+
+#baby .produtos a, #baby .details {
+    font-family: krona one;
+    font-size: xx-small;
+    color: #DB7C7B;
+    text-decoration: none;
+}
+
+#baby .pdtImg{
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+#baby .pdtImg .hover{
+    background-color: #e8e3d864;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+#baby .pdtImg:hover .hover{
+    display: block;
+}
+
+#baby .heart {
+    color: #DB7C7B;
+    position: absolute;
+    right: 6%;
+    top: 6%;
+}
+
+#baby .heart:hover .heartOutline{
+    display:none;
+}
+
+#baby .heart .heartFull{
+    display:none;
+}
+
+#baby .heart:hover .heartFull{
+    display:block;
+}
+
+#baby .btnProductDetail a{
+    font-size: x-small;
+    background-color: #DBBCD7;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    margin: 0;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#baby .btnProductDetail:hover a{
+    background-color: #DB7C7B;
+}
+
+#baby .btnAddCart a{
+    font-size: x-small;
+    background-color: #DBBCD7;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    margin: 0;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#baby .btnAddCart:hover a{
+    background-color: #DB7C7B;
+}
 
 
 

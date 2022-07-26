@@ -194,13 +194,15 @@ else if($act == 'editProduct'){
     }
 
     $stmt = $conn->prepare("UPDATE produtos SET titulo = ?, ID_marca = ?, preco = ?, descricao = ?, ID_categoria = ?, ID_sub_categoria = ?, ID_tipo_produto = ? WHERE ID = ?");
-    $stmt->bind_param("sidsiiisi", $titulo, $ID_marca, $preco, $descricao, $ID_categoria, $ID_sub_categoria, $ID_tipo_produto, $ID);
+    $stmt->bind_param("sidsiiii", $titulo, $ID_marca, $preco, $descricao, $ID_categoria, $ID_sub_categoria, $ID_tipo_produto, $ID);
     $stmt->execute();
 
     if($stmt->affected_rows === 0)
         echo "Error, try again";
-    else
-        echo 'admin_products.php';
+    else{
+        header('Location: ../admin_products.php');
+        exit();
+    }
     
     $stmt->close();
 
@@ -215,8 +217,10 @@ else if($act == 'deleteProduct'){
 
     if($stmt->affected_rows === 0)
         echo "Not possible to delete product!";
-    else
-        echo "Product deleted!";
+    else{
+        header('Location: ../admin_products.php');
+        exit();
+    }
 
     $stmt->close();
 }
@@ -304,13 +308,15 @@ else if($act == 'editBrand'){
     }
 
     $stmt = $conn->prepare("UPDATE marcas SET marca = ? WHERE ID = ?");
-    $stmt->bind_param("s", $marca, $ID);
+    $stmt->bind_param("si", $marca, $ID);
     $stmt->execute();
 
     if($stmt->affected_rows === 0)
         echo "Error, try again";
-    else
-        echo 'admin_brands.php';
+    else{
+        header('Location: ../admin_brands.php');
+        exit();
+    }
     
     $stmt->close();
 
@@ -325,8 +331,10 @@ else if($act == 'deleteBrand'){
 
     if($stmt->affected_rows === 0)
         echo "Not possible to delete brand!";
-    else
-        echo "Brand deleted!";
+    else{
+        header('Location: ../admin_brands.php');
+        exit();
+    }
 
     $stmt->close();
 }
@@ -360,8 +368,10 @@ else if($act == 'editCategory'){
 
     if($stmt->affected_rows === 0)
         echo "Error, try again";
-    else
-        echo 'admin_category.php';
+    else{
+        header('Location: ../admin_category.php');
+        exit();
+    }
     
     $stmt->close();
 
@@ -370,14 +380,16 @@ else if($act == 'editCategory'){
 else if($act == 'deleteCategory'){
     $ID = $_GET['ID'];
 
-    $stmt = $conn->prepare("DELETE FROM category WHERE ID=?");
+    $stmt = $conn->prepare("DELETE FROM categorias WHERE ID=?");
     $stmt->bind_param("i", $ID);
     $stmt->execute();
 
     if($stmt->affected_rows === 0)
         echo "Not possible to delete category!";
-    else
-        echo "Category deleted!";
+    else{
+        header('Location: ../admin_category.php');
+        exit();
+    }
 
     $stmt->close();
 }
@@ -388,7 +400,7 @@ else if($act == 'newSubCategory'){
     $ID_categoria = $_POST['ID_categoria'];
 
     $stmt = $conn->prepare ("INSERT INTO sub_categorias (ID, sub_categoria, ID_categoria) VALUES (?, ?, ?)");
-    $stmt->bind_param("isi", $ID, $subcategoria, $ID_categoria);
+    $stmt->bind_param("isi", $ID, $sub_categoria, $ID_categoria);
     $stmt->execute();
     
     if($stmt->affected_rows === 0)
@@ -408,7 +420,7 @@ else if($act == 'editSubCategory'){
     $ID_categoria = $_POST['ID_categoria'];
 
     $stmt = $conn->prepare("UPDATE sub_categorias SET sub_categoria = ?, ID_categoria = ? WHERE ID = ?");
-    $stmt->bind_param("sii", $subcategoria, $ID_categoria, $ID);
+    $stmt->bind_param("sii", $sub_categoria, $ID_categoria, $ID);
     $stmt->execute();
 
     if($stmt->affected_rows === 0)
@@ -431,8 +443,10 @@ else if($act == 'deleteSubCategory'){
 
     if($stmt->affected_rows === 0)
         echo "Not possible to delete sub category!";
-    else
-        echo "Sub Category deleted!";
+    else{
+        header('Location: ../admin_subCategory.php');
+        exit();
+    }
 
     $stmt->close();
 }

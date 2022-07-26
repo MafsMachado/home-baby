@@ -15,11 +15,11 @@ $result = $stmt->get_result();
 $row = $result->fetch_assoc();
 ?>
 
-<section id="adminEditProducts" class="pt-5 pb-5 container">
+<section id="adminEditProduct" class="pt-5 pb-5 container">
     <h1>Edit product</h1>
     <form action="inc/actions.php?act=editProduct" method="POST" autocomplete="off" enctype="multipart/form-data" class="mt-4">
         <!-- id -->
-        <div><?= $ID ?></div>
+        <input type="text" name="ID" value="<?= $ID ?>">;
         <!-- titulo --> 
         <div class="mt-3">
             Title:
@@ -117,61 +117,21 @@ $row = $result->fetch_assoc();
         </div>
         <!-- imagem 1 -->
         <div class="mt-3">
-            <img src="img/<?php
-            if($ID_categoria == 1){
-                echo 'product home';
-            }
-            else{
-                echo 'product baby';
-            }
-            ?>
-            /<?= $row['img1'] ?>
-            " alt="" width="200">
             Image 1:
             <input type="file" name="img1">
         </div>
         <!-- imagem 2 -->
         <div class="mt-3">
-            <img src="img/<?php
-            if($ID_categoria == 1){
-                echo 'product home';
-            }
-            else{
-                echo 'product baby';
-            }
-            ?>
-            /<?= $row['img2'] ?>
-            " alt="" width="200">
             Image 2:
             <input type="file" name="img2">
         </div>
         <!-- imagem 3 -->
         <div class="mt-3">
-            <img src="img/<?php
-            if($ID_categoria == 1){
-                echo 'product home';
-            }
-            else{
-                echo 'product baby';
-            }
-            ?>
-            /<?= $row['img3'] ?>
-            " alt="" width="200">
             Image 3:
             <input type="file" name="img3">
         </div>
         <!-- imagem 4 -->
         <div class="mt-3">
-            <img src="img/<?php
-            if($ID_categoria == 1){
-                echo 'product home';
-            }
-            else{
-                echo 'product baby';
-            }
-            ?>
-            /<?= $row['img4'] ?>
-            " alt="" width="200">
             Image 4:
             <input type="file" name="img4">
         </div>

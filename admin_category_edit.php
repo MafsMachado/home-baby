@@ -19,24 +19,11 @@ $row = $result->fetch_assoc();
     <h1>Edit category</h1>
     <form action="inc/actions.php?act=editCategory" method="POST" autocomplete="off" enctype="multipart/form-data" class="mt-4">
         <!-- id -->
-        <div><?= $ID ?></div>
+        <input type="text" name="ID" value="<?= $ID ?>">
         <!-- categoria -->
         <div class="mt-3">
             Category:
-            <select name="categoria">
-            <!-- obter dados já existentes para as opções -->
-            <?php
-
-                $stmt->close();
-                $sql = "SELECT * FROM categorias";
-                $result = $conn->query($sql);
-                while($row = $result->fetch_assoc()) {
-            ?>
-                    <option value="<?= $row['ID'] ?>"><?= $row['categoria'] ?></option>
-            <?php
-                }
-            ?>
-            </select>
+            <input type="text" name="categoria" value="<?= $row['categoria'] ?>">
         </div>
         <input type="submit" value="Submit" class="mt-4">
     </form>
